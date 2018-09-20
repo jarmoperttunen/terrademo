@@ -31,7 +31,7 @@ resource "google_compute_instance" "default" {
    "ssh-keys" = "vagrant:${file("~/.ssh/id_rsa.pub")}"
  }
 
-# metadata_startup_script = "${file("startup.sh")}"
+ metadata_startup_script = "${file("startup.sh")}"
 
  service_account {
    scopes = ["userinfo-email", "compute-ro", "storage-full", "cloud-platform"]
